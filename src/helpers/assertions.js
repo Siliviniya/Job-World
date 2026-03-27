@@ -1,6 +1,7 @@
 const CustomError = require("../error/customError");
 const { StatusCodes } = require("http-status-codes");
 
+// reusable functions related to business logic
 const fetchOrFail = (obj, msg, statusCode) => {
   if (!obj) {
     throw new CustomError(msg, statusCode);
