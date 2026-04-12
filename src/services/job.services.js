@@ -89,7 +89,7 @@ const applyJobService = async (userID, jobID, profileID) => {
 
 const fetchFilteredJobService = async (query) => {
   const page = parseInt(query.page) || 1;
-  const limit = query.limit || 10;
+  const limit = parseInt(query.limit) || 10;
   const skip = (page - 1) * limit;
 
   let validQuery = buildValidQuery(query);
